@@ -4,7 +4,7 @@ from django.db import models
 
 class User(models.Model):
     full_name        = models.CharField(max_length=64, blank=False)
-    email_address    = models.EmailField(blank=False)
+    email            = models.EmailField(blank=False)
     address          = models.CharField(max_length=64, blank=False)
     phone            = models.CharField(max_length=11, blank=False)
 
@@ -29,5 +29,5 @@ class Work(models.Model):
     position         = models.CharField(max_length=32, blank=True)
     description      = models.TextField(max_length=240, blank=False)
     start_date       = models.CharField(max_length=24)
-    end_date        = models.CharField(max_length=24, default = 'present')
+    end_date         = models.CharField(max_length=24, default = 'present')
 
